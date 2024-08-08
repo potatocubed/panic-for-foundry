@@ -2,6 +2,8 @@ const {
     HTMLField, SchemaField, NumberField, StringField, FilePathField, ArrayField
 } = foundry.data.fields;
 
+console.log("patd.js loaded")
+
 import * as characters from "./characters.js"
 
 Hooks.once("init", () => {
@@ -12,19 +14,19 @@ Hooks.once("init", () => {
 
     CONFIG.Actor.trackableAttributes = {
         playerCharacter: {
-            bar: [currentHealth],
-            value: [healthBars, 
-                tokens.power.value, 
-                tokens.speed.value,
-                tokens.iron.value, 
-                tokens.burning.value, 
-                tokens.weakness.value,
-                tokens.challenge.value, 
-                tokens.fatigue.value, 
-                tokens.control.value,
-                tokens.chaos.value, 
-                tokens.inspiration.value, 
-                tokens.training.value
+            bar: ["currentHealth"],
+            value: ["healthBars", 
+                "tokens.power", 
+                "tokens.speed",
+                "tokens.iron", 
+                "tokens.burning", 
+                "tokens.weakness",
+                "tokens.challenge", 
+                "tokens.fatigue", 
+                "tokens.control",
+                "tokens.chaos", 
+                "tokens.inspiration", 
+                "tokens.training"
             ]
         },
         warrior: {

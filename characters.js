@@ -1,4 +1,8 @@
-import * as tokens from "tokens.js";
+const {
+    HTMLField, SchemaField, NumberField, StringField, FilePathField, ArrayField
+} = foundry.data.fields;
+
+import * as tokens from "./tokens.js";
 
 export class CharacterData extends foundry.abstract.TypeDataModel {
 
@@ -13,24 +17,19 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
                 max: new NumberField({ required: true, integer: true, min: 0, initial: 9 })
             }),             
             tokens: new SchemaField({
-                power: new tokens.TokenData,
-                speed: new tokens.TokenData,
-                iron: new tokens.TokenData,
-                burning: new tokens.TokenData,
-                weakness: new tokens.TokenData,
-                challenge: new tokens.ChallengeTokenData,
-                fatigue: new tokens.TokenData,
+                power: new tokens.TokenData("Power", "Basic"),
+                speed: new tokens.TokenData("Speed", "Basic"),
+                iron: new tokens.TokenData("Iron", "Basic"),
+                burning: new tokens.TokenData("Burning", "Common"),
+                weakness: new tokens.TokenData("Weakness", "Common"),
+                challenge: new tokens.ChallengeTokenData("Challenge", "Common"),
+                fatigue: new tokens.TokenData("Fatigue", "Common"),
                 // TODO: Going to need some custom token options in here eventually.
-                control: new tokens.TokenData,
-                chaos: new tokens.TokenData,
-                inspiration: new tokens.TokenData,
-                training: new tokens.TokenData
+                control: new tokens.TokenData("Control"),
+                chaos: new tokens.TokenData("Chaos"),
+                inspiration: new tokens.TokenData("Inspiration"),
+                training: new tokens.TokenData("Training")
                 })
         }
-    }
-
-    prepareDerivedData() {
-        this.tokens.power.name = "Power"
-        this.tokens.power.rarity = "Basic"
     }
 }

@@ -13,6 +13,10 @@
       "email": "potatocubed+foundrypanic@gmail.com"
     }],
     
+    "esmodules": [
+      "patd.js"
+    ],
+
     "documentTypes": {
         "Actor": {
             "playerCharacter": {},
