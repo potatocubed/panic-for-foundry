@@ -1,0 +1,21 @@
+So what am I implementing, exactly?
+IN ORDER:
+
+a hex grid
+
+Health bars, and current health
+so essentially we're looking at assigning values to actors: 
+  health bars, current health and current max, tokens! token counts need to be visual on the icon
+  basic tokens, common tokens (inc challenge), rare tokens (inc custom tokens)
+this requires Actors, and values assigned to them, and displaying those values
+works for PCs and warriors
+bosses probably easy this way
+stooges! and the Twins custom boss
+
+Character sheets: stances, builds, archetype data, skills
+  focused/fused characters can create stances by selecting from dropdowns?
+  option to rename stances, obvs
+  skills are auto-picked from forms, but can be edited
+frantic characters are going to be tricky
+
+some sort of initiative tracker?

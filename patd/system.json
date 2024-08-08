@@ -1,0 +1,24 @@
+{
+    "id": "patd",
+    "title": "Panic! At The Dojo",
+    "description": "A Foundry implementation for Panic! At The Dojo by Vel Mini.",
+    "version": "0.0.1",
+    "compatibility": {
+      "minimum": 12,
+      "verified": 12
+    },
+    "authors": [{
+      "name": "Chris Longhurst",
+      "url": "potatocubed.carrd.co",
+      "email": "potatocubed+foundrypanic@gmail.com"
+    }],
+    
+    "documentTypes": {
+        "Actor": {
+            "playerCharacter": {},
+            "warrior": {},
+            "boss": {},
+            "stooge": {}
+        }
+    }
+}
